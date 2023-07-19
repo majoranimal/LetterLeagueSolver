@@ -1,8 +1,12 @@
 # LetterLeagueSolver
-Calculates the word that will give the most points taking into account the double word and double letter locations
+Calculates the word that will give the most points taking into account the double word and double letter locations.
 
 # How to use
-First open the config and configure the grid size and letter values, the default is the current values as of writing this, set your double letter and double word locations or leave them blank if there aren't any, click on "Calculate", the "Result" text should be updates to "word(worth): letterTiles", if the word is invalid click on "Next Word" for the next best.
+Open the config and configure the grid size and letter values, this step only has to be done once.
+
+Next enter all of the letters from the game and enter the double locations, if either aren't there leave them blank.
+
+Now click on "Calculate", the "Result" text should be updated to "word(worth): tiles", if the word isn't valid click on "Next Word" for the next best.
 
 # Attribution
 The wordlist I used to create "wordlist.json" was taken from https://www.mit.edu/~ecprice/wordlist.10000

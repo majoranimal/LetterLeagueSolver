@@ -106,8 +106,7 @@ def findPossibleWords(gridLocation, gridLocationsUsed, currentWord, possibleWord
             {
                 "word": currentWord + currentGrid.get(gridLocation),
                 "gridLocations": gridLocationsUsed + [gridLocation],
-            }
-        )
+            })
 
     newPossibleWords = []
     for word in possibleWords:
@@ -147,10 +146,14 @@ def calculateWord():
     global currentGrid
     global validWords
 
+    validWords = []
     currentGrid = {}
     for row in range(1, rowSize + 1):
         for col in range(1, columnSize + 1):
-            currentGrid[Point(row, col)] = refr.get(Point(row, col)).get().lower()
+            if refr.get(Point(row, col)).get() == "":
+                currentGrid[Point(row, col)] = " "
+            else:
+                currentGrid[Point(row, col)] = refr.get(Point(row, col)).get().lower()
     if doublesEntry.get("DL").get() == "":
         doubleLetter = Point(0, 0)
     else:
@@ -179,10 +182,12 @@ def calculateWord():
         wordWorth = 0
         for letter in word.get("word"):
             wordWorth += letterWorth.get(letter)
-        if doubleWord in word.get("gridLocations"):
-            wordWorth += wordWorth
         if doubleLetter in word.get("gridLocations"):
             wordWorth += letterWorth.get(currentGrid.get(doubleLetter))
+        if doubleWord in word.get("gridLocations"):
+            wordWorth += wordWorth
+        if len(word.get("gridLocations")) >= 6:
+            wordWorth += 10
 
         word["worth"] = wordWorth
     validWords = sorted(validWords, reverse=True, key=lambda d: d["worth"])

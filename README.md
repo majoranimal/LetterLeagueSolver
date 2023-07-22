@@ -3,6 +3,8 @@ Calculates the word that will give the most points taking into account the doubl
 
 # How to use
 ## Website
+Either download and run the website on your own hardware or visit https://majoranimal.github.io/LetterLeagueSolver/index.html.
+
 **Optional:** Click open settings and configure the grid size, long word values and letter values.
 
 Next enter all of the letters from your game and the double/triple locations, if any are missing leave them blank.

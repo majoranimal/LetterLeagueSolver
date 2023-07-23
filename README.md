@@ -1,4 +1,4 @@
-# LetterLeagueSolver
+# SpellCast Solver
 Calculates the word that will give the most points taking into account the double word and double letter locations.
 
 # How to use

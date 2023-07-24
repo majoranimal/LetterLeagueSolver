@@ -3,7 +3,7 @@ Calculates the word that will give the most points taking into account the doubl
 
 # How to use
 ## Website
-Either download and run the website on your own hardware or visit https://majoranimal.github.io/LetterLeagueSolver/index.html.
+Either download and run the website on your own hardware or visit https://majoranimal.github.io/SpellCastSolver/index.html.
 
 **Optional:** Click open settings and configure the grid size, long word values and letter values.
 
